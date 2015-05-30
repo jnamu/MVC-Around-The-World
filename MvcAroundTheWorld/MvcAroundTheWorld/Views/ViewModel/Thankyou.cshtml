@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Thankyou";
+}
+@model MvcAroundTheWorld.Models.ViewModel
+
+<h2>Thankyou</h2>
+
+@using (Html.BeginForm("Index", "Home"))
+{
+    <div>
+        <h4>Computer Competition Entry Form Details</h4>
+        <fieldset>
+            <ol>
+                <li>
+                    School Name: 
+                    @Html.DisplayFor(m => m.CompetitionEntry.School.NAME)
+                </li>
+                <li>
+                    Classroom: 
+                    @Html.DisplayFor(m => m.CompetitionEntry.CLASSROOM)
+                </li>
+                <li>
+                    Email: 
+                    @Html.DisplayFor(m => m.CompetitionEntry.Email)
+                </li>
+                <li>
+                    School Telephone: 
+                    @Html.DisplayFor(m => m.CompetitionEntry.School.TELEPHONE)
+                </li>
+                <li>
+                    School Address: 
+                    @Html.DisplayFor(m => m.CompetitionEntry.School.ADDRESS)
+                </li>
+                <li>
+                    Question: 
+                    @Html.DisplayFor(m => m.CompetitionQuestion.QUESTION)
+                </li>
+                <li>
+                    Selected Answer: 
+                    @Html.DisplayFor(model => model.SelectedAnswer)
+                </li>
+            </ol>
+        </fieldset>
+    </div>
+}

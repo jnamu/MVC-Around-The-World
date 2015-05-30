@@ -1,0 +1,5 @@
+﻿ALTER TABLE School
+DROP COLUMN Telephone;
+
+ALTER TABLE School
+ADD Telephone NVARCHAR(15);

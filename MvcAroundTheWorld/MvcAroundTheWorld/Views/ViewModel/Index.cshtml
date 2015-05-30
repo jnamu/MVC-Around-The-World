@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+@model MvcAroundTheWorld.Models.ViewModel
+
+<h2>Index</h2>
+<div>
+
+    @using (Html.BeginForm("SaveAction", "ViewModel"))
+    {
+        <div>
+            <h4>Win a computer</h4>
+            <fieldset>
+                <ol>
+                    <li>
+                        <label for="CompetitionEntry_School_NAME"> School Name</label> @*Creates custom label for textbox*@
+                        @Html.TextBoxFor(m => m.CompetitionEntry.School.NAME) @*Creates a textbox*@
+                        <script src="/Scripts/schoolnamecompletion.js"></script>
+                        @Html.ValidationMessageFor(m => m.CompetitionEntry.School.NAME)
+                    </li>
+                    <li>
+                        <label for="CompetitionEntry_CLASSROOM">Classroom</label>
+                        @Html.TextBoxFor(m => m.CompetitionEntry.CLASSROOM)
+                        @Html.ValidationMessageFor(m => m.CompetitionEntry.CLASSROOM)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.CompetitionEntry.Email) @*Creates label for textbox from database*@
+                        @Html.TextBoxFor(m => m.CompetitionEntry.Email)
+                        @Html.ValidationMessageFor(m => m.CompetitionEntry.Email)
+                    </li>
+                    <li>
+                        <label for="CompetitionEntry_School_TELEPHONE"> School Telephone</label>
+                        @Html.TextBoxFor(m => m.CompetitionEntry.School.TELEPHONE)
+                        @Html.ValidationMessageFor(m => m.CompetitionEntry.School.TELEPHONE)
+                    </li>
+                    <li>
+                        <label for="CompetitionEntry_School_ADDRESS">School Address</label>
+                        @Html.TextBoxFor(m => m.CompetitionEntry.School.ADDRESS)
+                        @Html.ValidationMessageFor(m => m.CompetitionEntry.School.ADDRESS)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.CompetitionEntry.CompetitionQuestion.QUESTION) <br>
+                        @Html.DisplayFor(m => m.CompetitionQuestion.QUESTION) @*Displays Question from database*@
+                        <ul>
+                            @foreach (var item in Model.Answers) 
+                                //Selects the answers that match the question from the database
+                            {
+                                <li>
+                                    @Html.DisplayFor(modelItem => item.Answer_Text) @*Displays the answer*@
+                                    @Html.RadioButtonFor(model => model.SelectedAnswer, item.ID, true) @*A radio button for the answer*@
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                </ol>
+            </fieldset>
+            <input class="btn" type="submit" value="Send" />
+        </div>
+    }
+</div>
+
+    

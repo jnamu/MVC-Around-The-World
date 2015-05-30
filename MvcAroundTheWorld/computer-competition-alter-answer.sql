@@ -1,0 +1,5 @@
+﻿ALTER TABLE Answer
+ADD Answer NVARCHAR(30);
+
+ALTER TABLE Answer
+ADD Correct BIT;

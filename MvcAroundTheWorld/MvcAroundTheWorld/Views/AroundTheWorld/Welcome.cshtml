@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Welcome";
+}
+
+<script src="/scripts/jquery-2.1.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#complink").animate({left: '84%'}, {duration: (8000)});
+    });
+</script>
+
+    <div class="jumbotron">
+        @* This creates the big box at the top of the page that is below the navigation *@
+        <h1>Around The World</h1>
+        <p>Learn how to play the iconic darts game around the world</p>
+    </div>
+
+
+    <div id="complink" style="position:relative;" >
+    <a href="@Url.Action("Index", "ViewModel")">
+        @*Sends the link to the competition page*@
+        <img src="@Url.Content("~/Content/Images/computer-comp-link.jpg")"/> @*Image for link*@
+    </a>
+    </div>
+
+    <div class="row">
+        @* This creates the row *@
+        <div class="col-md-4">
+            @* This is the first column *@
+            <h2>Introduction</h2>
+            <p>
+                Around the world is a basic darts game that people mainly play when practicing or are beginning to play darts
+                and want to learn the scoring positions on the board.
+            </p>
+            <p>
+                Around the world is also known as ‘Round the Board’, ‘Round the Clock’ and ‘Once Round the Island’.
+            </p>
+            <p>
+                The object of the game is to hit every number on the board in order finishing with the bullseye. It is a very
+                easy game to play but is good practice as it uses the whole board. It is also a fast moving game.
+            </p>
+        </div> @*End of first column*@
+
+        <div class="col-md-4">
+            @* This is the second column *@
+            <h2>Equipment List</h2>
+            <ul>
+                <li>To set up:</li>
+                <ul>
+                    <li>Tape Measure</li>
+                    <li>
+                        Wall that is suitable to put the <br />
+                        dart board on
+                    </li>
+                    <li>Marker for where to stand</li>
+                </ul>
+                <li>To play:</li>
+                <ul>
+                    <li>Dart Board</li>
+                    <li>2 Players</li>
+                    <li>2 Sets of darts (3 per set)</li>
+                </ul>
+
+            </ul>
+        </div> @*End of second column*@
+
+        <div class="col-md-4">
+            @* This is the third column *@
+            <h2>Tutorials</h2>
+            <p>
+                The tutorials on this website will teach you:
+                <ul>
+                    <li>How to set up a dart board correctly</li>
+                    <li>Good aiming practices</li>
+                    <li>How to play around the board</li>
+                    <li>and more...</li>
+                </ul>
+
+                To get started click the following button
+            </p>
+            <p><a class="btn btn-default" href="~/AroundTheWorld/Tutorials">Start</a></p>
+        </div> @*End of third column*@
+    </div> @*End of row*@
+
+
+
+
+

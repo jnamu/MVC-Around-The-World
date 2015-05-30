@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<h2>Tutorial 1</h2>
+
+<div class="row"> @* This creates the row for step one *@
+    <div class="col-md-8"> @* This is the first column *@
+        <h3>Step One - Dartboard Height</h3>
+        <p>
+            <ul>
+                <li>Grab a tape measure and measure the height</li>
+                <li>Position the dartboard at the right height</li>
+                <li>The dartboard height is measured from the centre of the dartboard to the ground</li>
+                <li>That is from the centre of the bulls-eye to the ground</li>
+                <li>The height is 5 feet 8 inches, 68 inches, 1.73 metres or 173 centimetres</li>
+            </ul>
+        </p>
+    </div> @*End of first column*@
+
+    <div class="col-md-2"> @* This is the second column *@
+        <img src="@Url.Content("~/Content/Images/dartboard-height-2.png")" alt="Dartboard Height" />
+    </div> @*End of second column*@
+</div> @*End of row for step one*@
+
+<div class="row"> @* This creates the row for step two *@
+    <div class="col-md-8"> @* This is the first column *@
+        <h3>Step Two - Standing Position</h3>
+        <p>
+            <ul>
+                <li>Grab a tape measure and measure the distance</li>
+                <li>The distance is measured from the front of the dartboard to the throwing line</li>
+                <li>The distance is 93.25 inches, 2.37 metres or 237 centimetres</li>
+                <li>Mark a line on the floor (can be a simple line or a raised bar) This is the point that you stand at and must not cross when throwing your darts</li>
+            </ul>
+        </p>
+    </div> @*End of first column*@
+
+    <div class="col-md-2"> @* This is the second column *@
+        <img src="@Url.Content("~/Content/Images/dartboard-length-2.png")" alt="Dartboard Height" />
+    </div> @*End of second column*@
+</div> @*End of row for step two*@
+
+<div class="row"> @* This creates the row for step three *@
+    <div class="col-md-8"> @* This is the first column *@
+        <h3>Step Three - Diagonal Positioning</h3>
+        <p>
+            <ul>
+                <li>After the dartboard has been set up it is a good idea to measure the distance diagonally</li>
+                <li>Grab a tape measure and measure from the centre of the bull diagonally down to your throwing line</li>
+                <li>The distance should be 9 feet 6 inches, 115.35 inches, 2.93 meters or 293 centimetres</li>
+                <li>If that is correct your dart board is set up</li>
+            </ul>
+        </p>
+    </div> @*End of first column*@
+
+    <div class="col-md-2"> @* This is the second column *@
+        <img src="@Url.Content("~/Content/Images/dartboard-diagonal-2.png")" alt="Dartboard Height" />
+    </div> @*End of second column*@
+</div> @*End of row for step three*@
+
+<p>
+    <a class="btn btn-default" href="~/AroundTheWorld/Tutorials">Back</a>
+    <a class="btn btn-default" href="~/AroundTheWorld/Tutorial2">Next</a>
+</p>

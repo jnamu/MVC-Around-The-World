@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ScoreBoard";
+}
+
+@*<script type="Text/JavaScript" src="around-the-world.js">*@
+@*</script>*@
+
+<h2>Welcome to the scoreboard</h2>
+
+@*<img src="@Url.Content("~/Content/chalkboard-image.jpg")" alt="Chalkboard"/>*@
+
+
+<canvas id="ScoreBoardCanvas" width="800" height="700" style="border:3px solid #000000;">
+</canvas>
+  
+  <script>
+        var canvas = document.getElementById('ScoreBoardCanvas');
+        var ctx = canvas.getContext('2d');
+        @*var width = "800";
+        var height = "600";
+        var imageObj = new Image();
+
+        imageObj.onload = function () {
+            ctx.drawImage(imageObj, 0, 0, width, height);
+        };
+        imageObj.src = "@Url.Content("~/Content/index.jpg")";*@
+
+      // Background
+      ctx.fillStyle = "#666362";
+      ctx.fillRect(0, 0, 800, 700);
+
+      // centre lines
+      ctx.beginPath();
+      ctx.strokeStyle = "#FFFFFF";
+      ctx.lineWidth="10";
+      ctx.moveTo(0, 50);
+      ctx.lineTo(800, 50);
+      ctx.moveTo(400, 0);
+      ctx.lineTo(400, 800)
+      ctx.stroke();
+
+      // Player 1 and 2
+      ctx.lineWidth = "2";
+      ctx.font = "30px Arial";
+      ctx.strokeText("Player 1", 140, 35);
+      ctx.strokeText("Player 2", 550, 35);
+
+      // Numbers
+      ctx.strokeText("20", 170, 80);
+      ctx.strokeText("20", 580, 80);
+      ctx.strokeText("19", 170, 110);
+      ctx.strokeText("19", 580, 110);
+      ctx.strokeText("18", 170, 140);
+      ctx.strokeText("18", 580, 140);
+      ctx.strokeText("17", 170, 170);
+      ctx.strokeText("17", 580, 170);
+      ctx.strokeText("16", 170, 200);
+      ctx.strokeText("16", 580, 200);
+      ctx.strokeText("15", 170, 230);
+      ctx.strokeText("15", 580, 230);
+      ctx.strokeText("14", 170, 260);
+      ctx.strokeText("14", 580, 260);
+      ctx.strokeText("13", 170, 290);
+      ctx.strokeText("13", 580, 290);
+      ctx.strokeText("12", 170, 320);
+      ctx.strokeText("12", 580, 320);
+      ctx.strokeText("11", 170, 350);
+      ctx.strokeText("11", 580, 350);
+      ctx.strokeText("10", 170, 380);
+      ctx.strokeText("10", 580, 380);
+      ctx.strokeText("9", 180, 410);
+      ctx.strokeText("9", 590, 410);
+      ctx.strokeText("8", 180, 440);
+      ctx.strokeText("8", 590, 440);
+      ctx.strokeText("7", 180, 470);
+      ctx.strokeText("7", 590, 470);
+      ctx.strokeText("6", 180, 500);
+      ctx.strokeText("6", 590, 500);
+      ctx.strokeText("5", 180, 530);
+      ctx.strokeText("5", 590, 530);
+      ctx.strokeText("4", 180, 560);
+      ctx.strokeText("4", 590, 560);
+      ctx.strokeText("3", 180, 590);
+      ctx.strokeText("3", 590, 590);
+      ctx.strokeText("2", 180, 620);
+      ctx.strokeText("2", 590, 620);
+      ctx.strokeText("1", 180, 650);
+      ctx.strokeText("1", 590, 650);
+      ctx.strokeText("Bullseye", 140, 680);
+      ctx.strokeText("Bullseye", 550, 680);
+
+</script>

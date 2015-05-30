@@ -1,0 +1,103 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<h2>Tutorial 4</h2>
+
+
+<div class="row"> @* This creates the row for step one *@
+    <div class="col-md-8"> @* This is the first column *@
+        <h3>Step One - Aim of the game </h3>
+        <p>
+            <ul>
+                <li>
+                    This version of around the world if for more advanced players
+                </li>
+                <li>
+                    The aim of the game is to hit every number on the board in order
+                </li>
+                <li>
+                    If you are playing against someone else another aim is to finish <br />
+                    before that player
+                </li>
+            </ul>
+        </p>
+    </div> @*End of first column*@
+
+    <div class="col-md-2"> @* This is the second column *@
+        <img src="@Url.Content("~/Content/Images/more-advanced.png")" alt="In Order" />
+    </div> @*End of second column*@
+</div> @*End of row for step one*@
+
+<div class="row"> @* This creates the row for step two *@
+    <div class="col-md-8"> @* This is the first column *@
+        <h3>Step Two - Scoring of the game</h3>
+        <p>
+            <ul>
+                <li>
+                    The only scoring needed is a record of the numbers that the </br>
+                    players are up to
+                </li>
+            </ul>
+        </p>
+    </div> @*End of first column*@
+
+    <div class="col-md-2"> @* This is the second column *@
+        <img src="@Url.Content("~/Content/Images/scoring.png")" alt="Scoring" />
+    </div> @*End of second column*@
+</div> @*End of row for step two*@
+
+<div class="row"> @* This creates the row for step three *@
+    <div class="col-md-8"> @* This is the first column *@
+        <h3>Step Three - Rules of the game</h3>
+        <p>
+            <ul>
+                <li>
+                    Only the double section of a numbers triangle on the board counts <br /> 
+                    as a hit for that number
+                </li>
+                <li>The first player tries to hit 1 first</li>
+                <li>They keep aiming for 1 until it is hit</li>
+                <li>
+                    When 1 is hit the player can aim for 2 and so on until all three </br>
+                    darts have been thrown
+                </li>
+                <li>The second player then does the same thing</li>
+                <li>Once a player hits 20 they can aim for the centre of the bullseye</li>
+            </ul>
+        </p>
+    </div> @*End of first column*@
+
+    <div class="col-md-2"> @* This is the second column *@
+        <img src="@Url.Content("~/Content/Images/highlighted2.png")" alt="Dartboard Height" />
+        <img src="@Url.Content("~/Content/Images/darts.png")" alt="Dartboard Height" />
+    </div> @*End of second column*@
+</div> @*End of row for step three*@
+
+<div class="row"> @* This creates the row for extra *@
+    <div class="col-md-8"> @* This is the first column *@
+        <h3>Step Three - Rules of the game</h3>
+        <p>
+            <ul>
+                <li>
+                    For even harder gameplay:
+                </li>
+                <li>
+                Only the triple section of a numbers triangle on the board counts as <br />
+                a hit for that number
+                </li>
+            </ul>
+        </p>
+    </div> @*End of first column*@
+
+    <div class="col-md-2"> @* This is the second column *@
+        <img src="@Url.Content("~/Content/Images/highlighted3.png")" alt="Dartboard Height" />
+    </div> @*End of second column*@
+</div> @*End of row for extra*@
+</br>
+</br>
+<p>
+    <a class="btn btn-default" href="~/AroundTheWorld/Tutorial3">Back</a>
+    <a class="btn btn-default" href="~/AroundTheWorld/Scoreboard">Scoreboard</a>
+</p>

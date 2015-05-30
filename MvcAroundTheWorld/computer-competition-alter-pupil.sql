@@ -1,0 +1,10 @@
+﻿ALTER TABLE Pupil
+DROP COLUMN PupilName;
+
+ALTER TABLE Pupil
+ADD FirstName NVARCHAR(50);
+
+ALTER TABLE Pupil
+ADD LastName NVARCHAR(50);
+
+
